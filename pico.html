@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bönan – Café (Pico)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+
+  <!-- Pico: header/main/footer med class="container" ger centrerad bredd -->
+  <header class="container">
+    <!-- Pico: <nav> med två <ul> lägger logga till vänster och länkar till höger -->
+    <nav>
+      <ul>
+        <li><strong>Bönan</strong></li>
+      </ul>
+      <ul>
+        <li><a href="#meny">Meny</a></li>
+        <li><a href="#om">Om oss</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1>Kaffe som gör måndagen lite bättre</h1>
+      <p>Nyrostat kaffe, surdegsbullar och lunch på riktigt – mitt i stan.</p>
+      <!-- Pico: role="button" gör en länk till en knapp -->
+      <a href="#meny" role="button">Se menyn</a>
+    </section>
+
+    <section id="meny">
+      <h2>Vad vi erbjuder</h2>
+      <!-- Pico: .grid = lika breda kolumner från 768px, staplat under -->
+      <div class="grid">
+        <article>
+          <h3>Kaffe</h3>
+          <p>Bryggt, espresso eller pour over. Bönorna rostas varje vecka.</p>
+        </article>
+        <article>
+          <h3>Bakverk</h3>
+          <p>Kanelbullar, kardemummabullar och dagens kaka.</p>
+        </article>
+        <article>
+          <h3>Lunch</h3>
+          <p>Soppa och smörgås, alltid med ett vegetariskt alternativ.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <h2>Få våra erbjudanden</h2>
+      <form>
+        <label for="email">E-postadress</label>
+        <!-- Pico: role="group" lägger fält och knapp på samma rad -->
+        <fieldset role="group">
+          <input type="email" id="email" name="email" placeholder="namn@exempel.se" required>
+          <button type="submit">Prenumerera</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container" id="om">
+    <small>© 2026 Bönan · Drottninggatan 1 · Öppet alla dagar 8–18</small>
+  </footer>
+
+</body>
+</html>

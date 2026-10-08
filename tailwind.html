@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bönan – Café (Tailwind)</title>
+  <!-- Play CDN: bara för test, inte produktion -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+  <header class="bg-stone-900 text-white">
+    <!-- Mobil: logga och länkar staplas. Från md (768px): på en rad -->
+    <nav class="max-w-5xl mx-auto px-4 py-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+      <ul>
+        <li><strong class="text-xl">Bönan</strong></li>
+      </ul>
+      <ul class="flex gap-6">
+        <li><a href="#meny" class="hover:text-amber-300 focus-visible:outline-2 focus-visible:outline-amber-300 rounded">Meny</a></li>
+        <li><a href="#om" class="hover:text-amber-300 focus-visible:outline-2 focus-visible:outline-amber-300 rounded">Om oss</a></li>
+        <li><a href="#kontakt" class="hover:text-amber-300 focus-visible:outline-2 focus-visible:outline-amber-300 rounded">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bg-amber-100">
+      <div class="max-w-5xl mx-auto px-4 py-16 md:py-24">
+        <h1 class="text-4xl md:text-5xl font-bold max-w-2xl">Kaffe som gör måndagen lite bättre</h1>
+        <p class="mt-4 text-lg max-w-xl">Nyrostat kaffe, surdegsbullar och lunch på riktigt – mitt i stan.</p>
+        <a href="#meny" class="inline-block mt-8 bg-amber-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-800">Se menyn</a>
+      </div>
+    </section>
+
+    <section id="meny" class="max-w-5xl mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold mb-8">Vad vi erbjuder</h2>
+      <!-- 1 kolumn på mobil, 3 från md -->
+      <div class="grid gap-6 md:grid-cols-3">
+        <article class="bg-white rounded-xl shadow p-6">
+          <h3 class="text-xl font-semibold mb-2">Kaffe</h3>
+          <p>Bryggt, espresso eller pour over. Bönorna rostas varje vecka.</p>
+        </article>
+        <article class="bg-white rounded-xl shadow p-6">
+          <h3 class="text-xl font-semibold mb-2">Bakverk</h3>
+          <p>Kanelbullar, kardemummabullar och dagens kaka.</p>
+        </article>
+        <article class="bg-white rounded-xl shadow p-6">
+          <h3 class="text-xl font-semibold mb-2">Lunch</h3>
+          <p>Soppa och smörgås, alltid med ett vegetariskt alternativ.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="kontakt" class="max-w-5xl mx-auto px-4 pb-16">
+      <h2 class="text-3xl font-bold mb-4">Få våra erbjudanden</h2>
+      <form class="flex flex-col gap-2 sm:flex-row sm:items-end max-w-xl">
+        <div class="flex-1">
+          <label for="email" class="block font-medium mb-1">E-postadress</label>
+          <input type="email" id="email" name="email" placeholder="namn@exempel.se" required
+                 class="w-full border border-stone-400 rounded-lg px-3 py-2 bg-white focus-visible:outline-2 focus-visible:outline-amber-800">
+        </div>
+        <button type="submit" class="bg-amber-800 text-white px-5 py-2 rounded-lg font-semibold hover:bg-amber-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-800">Prenumerera</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="om" class="bg-stone-900 text-stone-300">
+    <p class="max-w-5xl mx-auto px-4 py-6 text-sm">© 2026 Bönan · Drottninggatan 1 · Öppet alla dagar 8–18</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bönan – Café (Bulma)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+</head>
+<body>
+
+  <header>
+    <!-- Bulma har ingen JS: på mobil visas menyn under loggan i stället för som hamburgare -->
+    <nav class="navbar is-dark" aria-label="Huvudmeny">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item has-text-weight-bold" href="#">Bönan</a>
+        </div>
+        <div class="navbar-menu is-active">
+          <div class="navbar-end">
+            <a class="navbar-item" href="#meny">Meny</a>
+            <a class="navbar-item" href="#om">Om oss</a>
+            <a class="navbar-item" href="#kontakt">Kontakt</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Bulma: hero-komponent -->
+    <section class="hero is-primary is-medium">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-2">Kaffe som gör måndagen lite bättre</h1>
+          <p class="subtitle">Nyrostat kaffe, surdegsbullar och lunch på riktigt – mitt i stan.</p>
+          <a href="#meny" class="button is-dark is-medium">Se menyn</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="meny" class="section">
+      <div class="container">
+        <h2 class="title is-3">Vad vi erbjuder</h2>
+        <!-- Bulma: .columns staplas under 769px, sida vid sida över -->
+        <div class="columns">
+          <div class="column">
+            <article class="card" style="height: 100%">
+              <div class="card-content">
+                <h3 class="title is-5">Kaffe</h3>
+                <p>Bryggt, espresso eller pour over. Bönorna rostas varje vecka.</p>
+              </div>
+            </article>
+          </div>
+          <div class="column">
+            <article class="card" style="height: 100%">
+              <div class="card-content">
+                <h3 class="title is-5">Bakverk</h3>
+                <p>Kanelbullar, kardemummabullar och dagens kaka.</p>
+              </div>
+            </article>
+          </div>
+          <div class="column">
+            <article class="card" style="height: 100%">
+              <div class="card-content">
+                <h3 class="title is-5">Lunch</h3>
+                <p>Soppa och smörgås, alltid med ett vegetariskt alternativ.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section pt-0">
+      <div class="container">
+        <h2 class="title is-3">Få våra erbjudanden</h2>
+        <form>
+          <label for="email" class="label">E-postadress</label>
+          <!-- Bulma: has-addons sätter fält och knapp ihop -->
+          <div class="field has-addons">
+            <div class="control is-expanded">
+              <input type="email" class="input" id="email" name="email" placeholder="namn@exempel.se" required>
+            </div>
+            <div class="control">
+              <button type="submit" class="button is-primary">Prenumerera</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="om" class="footer">
+    <div class="content has-text-centered">
+      <p>© 2026 Bönan · Drottninggatan 1 · Öppet alla dagar 8–18</p>
+    </div>
+  </footer>
+
+</body>
+</html>
